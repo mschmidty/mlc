@@ -26,7 +26,7 @@ gulp.task('browser-sync', function() {
     //initialize browsersync
     browserSync.init(files, {
     //browsersync with a php server
-    proxy: "fcri:8888/",
+    proxy: "mlc:8888/",
     notify: true
     });
 });
