@@ -27,29 +27,39 @@
     <source src="<?php echo get_template_directory_uri() . '/video/home-vid-min.mp4'; ?>" type="video/mp4">
   </video>
 </div>
+
+
 <div class="home-page-programs container flex-cards-container">
-  <div class="card" style="background: url(https://cdn.allsummitcounty.com/images/content/5628_6896_Montezuma_Colorado_Pennsylvania_Mine_lg.jpg) no-repeat center center; background-size:cover;">
+  <div class="card">
+    <div class="background-image" style="background: url(https://cdn.allsummitcounty.com/images/content/5628_6896_Montezuma_Colorado_Pennsylvania_Mine_lg.jpg) no-repeat center center; background-size:cover;">
+    </div>
     <div class="card-text-box">
       <h2>Header</h2>
       <p>This is some text once it knows how big the container is in order to convert 100% to px before adding the values.</p>
       <a href="#" class="link">Find more </a>
-    </div>
+    </div> 
   </div>
-  <div class="card" style="background: url(http://montezumacounty.org/web/wp-content/uploads/2017/11/untitled.png)no-repeat center center; background-size:cover;">
+  <div class="card">
+    <div  class="background-image" style="background: url(http://montezumacounty.org/web/wp-content/uploads/2017/11/untitled.png)no-repeat center center; background-size:cover;">
+    </div>
     <div class="card-text-box">
       <h2>Header</h2>
       <p>This is some text once it knows how big the container is in order to convert 100% to px before adding the values.</p>
       <a href="#" class="link">Find more </a>
-    </div>
+    </div> 
   </div>
-  <div class="card" style="background: url(http://karoospace.co.za/wp-content/uploads/2013/06/lowngunis0003.jpg) no-repeat center center; background-size:cover;">
+  <div class="card">
+    <div class="background-image" style="background: url(http://karoospace.co.za/wp-content/uploads/2013/06/lowngunis0003.jpg) no-repeat center center; background-size:cover;">
+    </div>
     <div class="card-text-box">
       <h2>Header</h2>
       <p>This is some text once it knows how big the container is in order to convert 100% to px before adding the values.</p>
-       <a href="#" class="link">Find more </a>
-    </div>
+      <a href="#" class="link">Find more </a>
+    </div> 
   </div>
 </div>
+
+
 <div class="home-newsletter-section">
   <div class="card-text-box">
     <h1>Sign Up For Our Newsletter</h1>

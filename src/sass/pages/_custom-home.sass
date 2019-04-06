@@ -51,15 +51,21 @@
 
 .home-video-section
   position: relative
-  .card-text-box
-    font-style: italic
-    position: absolute
-    top: 10%
-    left: 10%
-    z-index: 100
+  width: 100%
+  overflow: hidden
+  &:hover
+    .video-on-play
+      filter: grayscale(0)
+      transform: scale(1.1)
+    .card-text-box
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.7)
   .video-on-play
     position: relative
     z-index: 1
+    width: 100%
+    filter: grayscale(1)
+    transition: 0.5s all ease
+  
 
 
 .home-newsletter-section
@@ -70,6 +76,6 @@
   position: relative
   .card-text-box
     position: absolute
-    width: none
-    top: 10%
-    left: 10%
+    top: $gutter-spacing
+    left: $gutter-spacing*2
+    bottom: auto

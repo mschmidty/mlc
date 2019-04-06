@@ -1,0 +1,50 @@
+.half-section-single
+  display: flex
+  min-height: 800px
+  
+.half-section .half-section-single
+  &:nth-of-type(2n)
+    .half-section-single-text
+      order: 2
+    .half-section-single-image
+      order: 1  
+
+.half-section-single-text, .half-section-single-image
+  flex-basis: 50%
+
+.half-section-single-text
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  max-width: 500px
+  position: relative
+  margin: 0 auto
+  p, h2, a 
+    width: 90%
+    margin: 0 auto
+    position: relative
+  
+  h2 
+    margin-bottom: $gutter-spacing/2
+  a
+    display: block
+    margin-top: $gutter-spacing/2
+  
+.half-section-single-image img
+  object-fit: cover
+  height: 900px
+  width: 100%
+  display: block
+  filter: grayscale(1)
+
+.half-section-small
+  .half-section-single
+    min-height: 450px
+  .half-section-single-image img
+    height: 450px
+  section.half-section-single
+    border-bottom: 4px solid $black
+    &:last-of-type
+      border-bottom: none
+

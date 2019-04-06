@@ -1,6 +1,6 @@
 css
-js
-images
 node_modules
+images/
+js/
 .DS_Store
 .jscsrc
