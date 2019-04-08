@@ -42,6 +42,7 @@
 
 .home-mission-section
   text-align: center
+  margin: $gutter-spacing $gutter-spacing 0 $gutter-spacing
   svg
     width: 75px
     fill: $grey
@@ -51,8 +52,9 @@
 
 .home-video-section
   position: relative
-  width: 100%
+  width: calc(100% - (#{$gutter-spacing}*2))
   overflow: hidden
+  margin: $gutter-spacing $gutter-spacing 0 $gutter-spacing
   &:hover
     .video-on-play
       filter: grayscale(0)
@@ -71,11 +73,12 @@
 .home-newsletter-section
   background: url(images/scc-build.jpg) center center no-repeat
   background-size: cover
+  width: calc(100% - (#{$gutter-spacing}*2))
   height: 900px
-  width: 100%
   position: relative
+  margin: $gutter-spacing auto
   .card-text-box
     position: absolute
     top: $gutter-spacing
-    left: $gutter-spacing*2
+    left: $gutter-spacing
     bottom: auto

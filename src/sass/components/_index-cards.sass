@@ -1,5 +1,5 @@
 .container
-  padding: $gutter-spacing
+  padding: $gutter-spacing $gutter-spacing 0 $gutter-spacing
   width: 100%
 
 .flex-cards-container
@@ -19,6 +19,8 @@
     margin-right: 0
   &:nth-of-type(2n)
     margin-right: 0
+  &:last-of-type
+    margin-bottom: 0
   &:hover
     .background-image
       filter: grayscale(0)
