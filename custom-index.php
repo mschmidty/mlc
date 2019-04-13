@@ -10,7 +10,8 @@
 <div class="home-page-programs container flex-cards-container">
 
 <?php
-$args = array('post_type'=> 'programs_detail');
+$post_type_slug = get_field('post_type_slug');
+$args = array('post_type'=> $post_type_slug);
 $my_query = new WP_Query( $args );
 while ( $my_query->have_posts() ) : $my_query->the_post();
 

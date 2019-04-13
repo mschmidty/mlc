@@ -15,12 +15,12 @@
   </svg>
   <h1 >Mission</h1>
   <p>Montezuma Land Conservancy partners with our community to connect with, conserve, and enhance southwest Colorado’s agricultural, scenic, and recreational lands and wildlife habitat for today and future generations.</p>
-  <a href="#" class="link">Learn More About us </a>
+  <a href="/about/" class="link">Learn More About us </a>
 </div>
 <div class="home-video-section">
   <div class="card-text-box">
     <p>A bit about who we are...</p>
-    <a href="#" class="link">Watch the whole video </a>
+    <a href="/a-film-about-who-we-are/" class="link">Watch the whole video </a>
   </div>
 
   <video autoplay loop muted playsinline class="video-on-play">
@@ -61,26 +61,7 @@
 
 
 <div class="home-newsletter-section">
-  <div class="card-text-box">
-    <h1>Sign Up For Our Newsletter</h1>
-    <p>Blurb about the newsletter.</p>
-    <form action="#" method="post" class="form">
-      <div>
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Name"/>
-      </div>
-      <div>
-          <label for="name">Email:</label>
-          <input type="text" name="name" id="name" value="" tabindex="1" placeholder="Email"/>
-      </div>
-
-      <div>
-          <input type="submit" value="Submit" class="button" />
-          <a href="#">Learn More</a>
-      </div>
-    </form>
-    
-  </div>
+  <?php get_template_part('template-parts/content', 'newsletter'); ?>
 </div>
 <?php
 get_footer();

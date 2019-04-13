@@ -60,6 +60,9 @@ while ( $my_query->have_posts() ) : $my_query->the_post();
 endwhile;
 ?>
 </div>
+<div class="about-newsletter-section newsletter-section">
+  <?php get_template_part('template-parts/content', 'newsletter'); ?>
+</div>
 <?php
 get_footer();
 ?>

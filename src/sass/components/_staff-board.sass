@@ -1,3 +1,5 @@
+//INDEX PAGE
+  
 .staff-board
   display: flex
   flex-wrap: wrap
@@ -6,9 +8,58 @@
   margin: 0 auto
 
 .staff-board-card
+  position: relative
   margin: $gutter-spacing
   flex-basis: calc(33% - (#{$gutter-spacing}*3))
   text-align: center
   text-decoration: none
+  transition: 0.5s all ease
+  img
+    position: relative
+    width: 100%
+    height: auto
+    display: block
+  &:hover
+    h2 
+      color: $link
+    img
+      filter: sepia(0.5)
+
+//DETAIL PAGE
+
+.staff-detail-container
+  max-width: 1200px
+  width: 80%
+  margin: $gutter-spacing auto
+  display: flex
   img
     width: 100%
+    height: auto
+  @media all and(max-width: 750px)
+    display: block
+    .staff-detail-image
+      margin: 0 auto
+      width: 100%
+      img 
+        width: 300px
+        margin: 0 auto
+        display: block
+      h2, .staff-board-title
+        text-align: center
+    .staff-detail-bio
+      width: 100%
+
+.staff-detail-image
+  width: 25%
+  margin-right: $gutter-spacing
+  .staff-board-quote 
+    font-style: italic
+  .staff-board-title
+    font-size: 2rem
+
+.staff-detail-bio
+  width: 75%
+  columns: 2 200px
+  column-gap: $gutter-spacing/2
+  p
+    margin-top: 0

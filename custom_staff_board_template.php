@@ -16,17 +16,14 @@ while ( $my_query->have_posts() ) : $my_query->the_post();
 
   ?>
   <a href=" <?php the_permalink(); ?>" class="staff-board-card">
-    <?php
+    <?php 
 
     $image = get_field('staff_board_image');
-    $size = 'large'; // (thumbnail, medium, large, full or custom size)
-    $medium_image = $image['sizes'][ $size ];
+    $size = 'full'; // (thumbnail, medium, large, full or custom size)
 
     if( $image ) {
 
-    	?>
-      <img src="<?php echo $medium_image; ?>" alt="<?php echo $image['alt']; ?>">
-      <?php
+      echo wp_get_attachment_image( $image, $size );
 
     }
 
