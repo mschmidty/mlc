@@ -10,7 +10,13 @@
 <div class="container staff-board">
 
 <?php
-$args = array('post_type'=> 'staff');
+global $post;
+if( is_page(69) ){
+  $args = array('post_type'=> 'staff', 'order' => 'ASC');
+} else {
+  $args = array('post_type'=> 'board', 'order' => 'ASC');
+}
+
 $my_query = new WP_Query( $args );
 while ( $my_query->have_posts() ) : $my_query->the_post();
 

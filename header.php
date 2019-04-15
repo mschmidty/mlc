@@ -33,19 +33,29 @@
 		  </svg>
 		</a>
 
-		<nav id="site-navigation" class="main-navigation header-navigation">
+		<nav id="site-navigation" class="main-navigation header-navigation hidden-mobile-nav">
+			<a href="#" class="toggle-close-button">
+				<svg  viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<use xlink:href="#close2"></use>
+				</svg>
+			</a>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-		<a href="#" class="search-icon">
-			<svg  viewBox="0 0 30.975 30.975" xmlns="http://www.w3.org/2000/svg" version="1.1">
-		  	<use xlink:href="#search_icon"></use>
-		  </svg>
+			<a href="/donate/" class="outline-button hidden-donate-mobile"> Donate
 		</a>
+		</nav><!-- #site-navigation -->
+		<a href="/donate/" class="outline-button hidden-mobile-nav hidden-donate-desktop"> Donate
+		</a>
+		<a href="#" class="toggle-nav-button">
+			<svg  viewBox="0 0 459 459" xmlns="http://www.w3.org/2000/svg" version="1.1">
+				<use xlink:href="#hamburger3"></use>
+			</svg>
+		</a>
+		
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

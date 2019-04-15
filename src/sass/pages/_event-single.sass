@@ -1,0 +1,24 @@
+.event-single-wrapper
+  width: 95%
+  max-width: 1300px
+  margin: $gutter-spacing*2 auto $gutter-spacing auto
+  display: flex
+  .column1
+    max-width: 700px
+    width: calc(60% - #{$gutter-spacing})
+    margin-right: $gutter-spacing*2
+    iframe
+      width: 100%
+  .column2
+    width: calc(40% - #{$gutter-spacing})
+  @media all and(max-width: 750px)
+    display: block
+    .column1, .column2
+      width: 100%
+      img   
+        display: block
+        width: 100%
+        margin: $gutter-spacing auto
+    
+
+  

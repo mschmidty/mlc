@@ -3,10 +3,10 @@
   get_header();
 ?>
 <div class="home-custom-banner">
-  <div class="home-custom-banner-text text-content">
+  <div class="home-custom-banner-text">
     <h1 class="title">Local People Protecting Local Land</h1>
     <p>Montezuma Land Conservancy, at its heart, is a not-for-profit Southwest Colorado land trust located in Cortez, CO established in 1998 to conserve special lands in our community.</p>
-    <a href="/donate/" class="link link-light">Donate </a>
+    <a href="/donate/" class="outline-button white-outline-button">Donate</a>
   </div>
 </div>
 <div class="home-mission-section section-wrapper pattern-section">
@@ -29,34 +29,34 @@
 </div>
 
 
-<div class="home-page-programs container flex-cards-container">
-  <div class="card">
-    <div class="background-image" style="background: url(https://cdn.allsummitcounty.com/images/content/5628_6896_Montezuma_Colorado_Pennsylvania_Mine_lg.jpg) no-repeat center center; background-size:cover;">
+<div class="flex-cards-container container">
+  <a href="/programs/" class="card">
+    <div class="background-image" style="background: url(<?php echo get_template_directory_uri() . '/images/CowsAndTree.jpg'; ?>) no-repeat center center; background-size:cover;">
     </div>
     <div class="card-text-box">
-      <h2>Header</h2>
-      <p>This is some text once it knows how big the container is in order to convert 100% to px before adding the values.</p>
-      <a href="#" class="link">Find more </a>
+      <h2>Find Out what we Do</h2>
+      <p>Conservation Easements, Fozzie's Farm, and Community Programs.</p>
+      <p class="link">Learn More </p>
     </div> 
-  </div>
-  <div class="card">
-    <div  class="background-image" style="background: url(http://montezumacounty.org/web/wp-content/uploads/2017/11/untitled.png)no-repeat center center; background-size:cover;">
+  </a>
+  <a href="/montezuma-inspire-coalition/" class="card">
+    <div  class="background-image" style="background: url(<?php echo get_template_directory_uri() . '/images/teen_backpack.jpg'; ?>)no-repeat center center; background-size:cover;">
     </div>
     <div class="card-text-box">
-      <h2>Header</h2>
-      <p>This is some text once it knows how big the container is in order to convert 100% to px before adding the values.</p>
-      <a href="#" class="link">Find more </a>
+      <h2>Montezuma Inspire Coalition</h2>
+      <p>An organization aiming to develop life-long outdoor lovers and land stewards.</p>
+      <p class="link">Get Inspired </p>
     </div> 
-  </div>
-  <div class="card">
-    <div class="background-image" style="background: url(http://karoospace.co.za/wp-content/uploads/2013/06/lowngunis0003.jpg) no-repeat center center; background-size:cover;">
+  </a>
+  <a href="/events/" class="card">
+    <div class="background-image" style="background: url(<?php echo get_template_directory_uri() . '/images/harvest_beer.jpg'; ?>) no-repeat center center; background-size:cover;">
     </div>
     <div class="card-text-box">
-      <h2>Header</h2>
-      <p>This is some text once it knows how big the container is in order to convert 100% to px before adding the values.</p>
-      <a href="#" class="link">Find more </a>
+      <h2>Events</h2>
+      <p>Check out what we have on the calendar!</p>
+      <p class="link">Check out upcomming Events </p>
     </div> 
-  </div>
+  </a>
 </div>
 
 

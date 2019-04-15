@@ -1,4 +1,4 @@
-.form 
+.form,  .card-tex-box , .wpforms-form
   label
     width: 100%
     display: block
@@ -6,15 +6,16 @@
     font-weight: bold
     font-family: $h-font
     
-input[type=text], .entry-content div.wpforms-container-full div.wpforms-field input.wpforms-field-medium, .entry-content div.wpforms-container-full div.wpforms-field textarea.wpforms-field-medium
-    margin-bottom: 1.2rem
+input[type=text], .entry-content div.wpforms-container-full div.wpforms-field input.wpforms-field-medium, .entry-content div.wpforms-container-full div.wpforms-field textarea.wpforms-field-medium, .card-text-box div.wpforms-container-full div.wpforms-field textarea.wpforms-field-medium
+.card-text-box div.wpforms-container-full div.wpforms-field input.wpforms-field-medium
+    margin: 0
     width: 100%
     font-size: 1.3rem
-    padding-top: 10px
+    padding-top: 0
     padding-bottom: 5px
     border: 1px solid $black
 
-.button , input[type=submit],  .entry-content div.wpforms-container-full .wpforms-form button.wpforms-submit                                                                                                                                                                                                   
+.button , input[type=submit],  .entry-content div.wpforms-container-full .wpforms-form button.wpforms-submit, .card-text-box div.wpforms-container-full .wpforms-form button.wpforms-submit 
   padding: 10px 20px 
   background-color: $link
   border: 0 none
@@ -26,3 +27,6 @@ input[type=text], .entry-content div.wpforms-container-full div.wpforms-field in
   color: $white
   font-family: $h-font
   font-size: 1.6rem
+
+.card-text-box div.wpforms-container-full .wpforms-form input.wpforms-field-medium, div.wpforms-container-full .wpforms-form select.wpforms-field-medium, div.wpforms-container-full .wpforms-form .wpforms-field-row.wpforms-field-medium 
+  max-width: 100%

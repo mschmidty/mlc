@@ -1,0 +1,62 @@
+.sponsor-wrap li.sponsor-level
+  width: 100%
+  &:nth-of-type(2n)
+    background: $off-white
+  &:first-of-type
+    h2 
+      font-size: 6rem
+  &:nth-of-type(2n)
+    .sponsor-image-list li 
+      width: calc( 20% - #{$gutter-spacing})
+      @media all and(max-width: 1000px)
+        width: calc( 25% - #{$gutter-spacing})
+      @media all and(max-width: 750px)
+        width: calc( 33.33% - #{$gutter-spacing}) 
+    h2 
+      font-size: 4rem
+  &:nth-of-type(3n)
+    .sponsor-image-list li 
+      width: calc( 16.6666% - #{$gutter-spacing})
+      @media all and(max-width: 1000px)
+        width: calc( 20% - #{$gutter-spacing})
+      @media all and(max-width: 750px)
+        width: calc( 25% - #{$gutter-spacing})
+
+.sponsor-level-wrap
+  width: 95%
+  padding: $gutter-spacing*2 0
+  display: flex
+  align-items: center
+  margin: 0 auto
+  @media all and( max-width: 600px)
+    display: block
+    h2 
+      text-align: center
+      padding: $gutter-spacing 0
+    .sponsor-column1, .sponsor-column2
+      width: 95%
+      margin: 0 auto
+
+.sponsor-column1
+  width: calc(25% - #{$gutter-spacing*2})
+  margin-right: $gutter-spacing*2
+  position: relative
+.sponsor-column2
+  width: 75%
+
+.sponsor-image-list
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  li
+    width: calc( 25% - #{$gutter-spacing})
+    margin: 0 $gutter-spacing/2 $gutter-spacing $gutter-spacing/2
+    @media all and(max-width: 1000px)
+      width: calc( 33.33% - #{$gutter-spacing})
+    @media all and(max-width: 750px)
+        width: calc( 50% - #{$gutter-spacing})
+
+  img 
+    max-width: 100%
+    height: auto

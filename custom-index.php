@@ -3,7 +3,8 @@
   get_header();
 ?>
 <?php
-  $image_url = "/images/CowsAndTree.jpg";
+  $image_name = get_field('post_associated_image_name');
+  $image_url = "/images/" . $image_name . ".jpg";
   include(locate_template('template-parts/content-image-header.php'));
 ?>
 

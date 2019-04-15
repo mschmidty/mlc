@@ -19,8 +19,6 @@
   @media all and(max-width: 725px)
     flex-basis: 100%
     width: 100%
-  
-
 
 .half-section-single-text
   display: flex
@@ -34,6 +32,7 @@
     position: relative
   p a 
     margin-left: 0
+    display: inline
   h2 
     margin-bottom: $gutter-spacing/2
   a
@@ -51,15 +50,16 @@
   overflow: hidden
   @media all and(max-width: 725px)
     height: 300px
-    width: 95%
+    width: calc(100% - #{$gutter-spacing})
     margin: 0 auto
   
 
 .half-section-small
   .half-section-single
-    min-height: 450px
+    height: 450px
   .half-section-single-image img
     height: 450px
+    border-bottom: 4px solid $black
   section.half-section-single
     border-bottom: 4px solid $black
     &:last-of-type

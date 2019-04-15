@@ -1,8 +1,10 @@
 <?php
+  /* Template Name: Layout 2 */
   get_header();
 ?>
 <?php
-  $image_url = "/images/screen_grab.png";
+  $image_name = get_field('post_associated_image_name');
+  $image_url = "/images/" . $image_name  ;
   include(locate_template('template-parts/content-image-header.php'));
 ?>
 
