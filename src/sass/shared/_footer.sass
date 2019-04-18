@@ -1,7 +1,28 @@
 #content
   min-height: calc(100vh - 100px)
+.top-footer-section
+  display: flex
+  justify-content: space-between
+  padding: $gutter-spacing/2 0
+  h3 
+    color: $white
 .site-footer
   background: $black
   color: $white
-  padding: $gutter-spacing
+  padding: $gutter-spacing $gutter-spacing 0 $gutter-spacing
   margin-top: $gutter-spacing
+.major-funders
+  display: flex
+  li 
+    margin: 10px
+  li img 
+    height: 60px
+.contact-info
+  li 
+    display: flex
+    justify-contente: center
+    align-items: center
+    svg
+      height: 18px
+      fill: $link
+    

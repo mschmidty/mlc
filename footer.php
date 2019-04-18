@@ -14,9 +14,28 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="top-section-photo">
+		<div class="top-footer-section">
+			<div class="contact-info">
+				<h3>Get in Touch</h3>
+				<ul>
+					<li>
+					<svg  viewBox="0 0 216.3 135.3" xmlns="http://www.w3.org/2000/svg" version="1.1">
+						<use xlink:href="#phone"></use>
+					</svg>
+						(970) 565-1664
+					</li>
+					<li>
+						<svg  viewBox="0 0 216.3 135.3" xmlns="http://www.w3.org/2000/svg" version="1.1">
+							<use xlink:href="#email"></use>
+						</svg>
+						<a href="contact">Send Us a Message</a>
+					</li>
+				</ul>
+			
+			</div>
 			<ul class="major-funders">
-				<li><img src="" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri(); ?>/images/acc_seal_stamp.png" alt=""></li>
+				<li><img src="<?php echo get_template_directory_uri(); ?>/images/land_trust_all.jpg" alt="Land Trust Alliance Logo"></li>
 			</ul>
 		</div>
 		<div class="site-info">

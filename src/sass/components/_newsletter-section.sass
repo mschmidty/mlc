@@ -4,8 +4,21 @@
   height: 900px
   position: relative
   margin: $gutter-spacing auto
+  @media all and(max-width: 750px)
+    display: block
+    background: $off-white
+    height: auto
+    margin: $gutter-spacing/2 $gutter-spacing/2 0 $gutter-spacing/2
+    width: calc(100% - (#{$gutter-spacing}))
   .card-text-box
     position: absolute
     top: $gutter-spacing
     left: $gutter-spacing
     bottom: auto
+    @media all and(max-width: 750px)
+      position: relative
+      top: auto
+      left: auto
+      width: 100%
+      background: $off-white
+      padding: $gutter-spacing $gutter-spacing/2
