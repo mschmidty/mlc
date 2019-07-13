@@ -1,80 +1,48 @@
-//Include gulp
-var gulp = require('gulp');
+const { src, dest, watch, series, parallel } = require('gulp');
+const sass = require('gulp-sass');
+const minifyCSS = require('gulp-csso');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const browserSync = require('browser-sync').create();
+const rename = require('gulp-rename');
+const autoprefixer = require('gulp-autoprefixer');
 
-//Include our plugins
-var browserSync = require('browser-sync');
-var reload      = browserSync.reload;
-var	sass = require('gulp-sass');
-var	autoprefixer = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
-var	minifycss = require('gulp-minify-css');
-var imagemin = require('gulp-imagemin');
-var concat = require('gulp-concat');
-var	rename = require("gulp-rename");
-var cheerio = require('gulp-cheerio');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
 
-//Browser-sync
-gulp.task('browser-sync', function() {
-    //watch files
-    var files = [
-    './style.css',
-    './*.php'
-    ];
+//Styles Task
+function css() {
+    return src('./src/sass/*.sass', { sourcemaps: true })
+        .pipe(sass())
+        .pipe(autoprefixer({
+            overrideBrowserslist: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(minifyCSS())
+        .pipe(rename('style.css'))
+        .pipe(dest('./'), { sourcemaps: true })
+        .pipe(browserSync.stream());
+}
 
-    //initialize browsersync
-    browserSync.init(files, {
-    //browsersync with a php server
-    proxy: "mlc:8888/",
-    notify: true
+function js() {
+    return src('./src/js/*.js', { sourcemaps: true })
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(concat('main.min.js'))
+        .pipe(dest('./js', { sourcemaps: true }));
+}
+
+function browser() {
+    browserSync.init({
+        proxy: 'mlc:8888',
+        files: [
+            './**/*.php'
+        ]
     });
-});
 
-// Compile Our Sass
-gulp.task('styles', function() {
-  return gulp.src('src/sass/*.sass')
-    .pipe(sass({ style: 'expanded', errLogToConsole: true}))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('css'))
-    .pipe(rename('style.css'))
-    .pipe(minifycss())
-    .pipe(gulp.dest('./'));
-});
+    watch('./src/sass/**/*', css);
+    watch('./src/js/*', js).on('change', browserSync.reload);
+}
 
-gulp.task('scripts', function() {
-  return gulp.src('src/js/*.js')
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('js'))
-    .pipe(rename('main.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('js'));
-});
-
-gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
-    .pipe(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true }))
-    .pipe(gulp.dest('images'));
-});
-
-gulp.task('svgstore', function () {
-    return gulp
-        .src('src/svg/*.svg')
-        .pipe(svgmin())
-        .pipe(svgstore({ inlineSvg:true }))
-        .pipe(rename('svg.php'))
-        .pipe(gulp.dest('template-parts'));
-});
-
-
-
-// Watch Files For Changes
-gulp.task('watch', function() {
-    gulp.watch('src/sass/**/*', ['styles']);
-    gulp.watch('src/images/*', ['images']);
-    gulp.watch('src/js/*.js', ['scripts']);
-    gulp.watch('src/svg/*.svg', ['svgstore']);
-});
-
-// Default Task
-gulp.task('default', ['styles', 'scripts','watch', 'images', 'svgstore', 'browser-sync']);
+exports.css = css;
+exports.js = js;
+exports.default = series(css, js, browser);

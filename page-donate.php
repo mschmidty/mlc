@@ -19,8 +19,8 @@
   ?>
   </div>
   <div class="donate-images">
-    <img src="<?php echo get_template_directory_uri() . '/images/kids-donate.jpg'; ?>" alt="">
-    <img src="<?php echo get_template_directory_uri() . '/images/kid-donate.jpg'; ?>" alt="">
+    <img src="<?php echo get_template_directory_uri() . '/images/donate_image1.jpg'; ?>" alt="">
+    <img src="<?php echo get_template_directory_uri() . '/images/donate_image2.jpg'; ?>" alt="">
   </div>
 </div>
 

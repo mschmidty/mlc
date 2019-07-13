@@ -35,7 +35,7 @@
 			</div>
 			<ul class="major-funders">
 				<li><img src="<?php echo get_template_directory_uri(); ?>/images/acc_seal_stamp.png" alt=""></li>
-				<li><img src="<?php echo get_template_directory_uri(); ?>/images/land_trust_all.jpg" alt="Land Trust Alliance Logo"></li>
+				<li><a href="https://www.landtrustalliance.org/"><img src="<?php echo get_template_directory_uri(); ?>/images/land_trust_all.jpg" alt="Land Trust Alliance Logo"></a></li>
 			</ul>
 		</div>
 		<div class="site-info">

@@ -60,8 +60,16 @@
   .half-section-single-image img
     height: 450px
     border-bottom: 4px solid $black
+    &:last-of-type
+      border-bottom: none
   section.half-section-single
     border-bottom: 4px solid $black
     &:last-of-type
       border-bottom: none
+  @media all and(max-width: 725px)
+    height: auto
+    display: block
+    background: $white
+    .half-section-single-image
+      display: none
 

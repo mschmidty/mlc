@@ -1,31 +1,35 @@
 {
-  "name": "fcri",
+  "name": "mlc_wp_theme",
   "version": "1.0.0",
-  "description": "Four Corners Recycling Initiative",
-  "main": "gulpfile.js",
+  "description": "A Wordpress theme for Montezuma Land Conservancy created by schmidtyworks.com",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.12.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "aucopyeditor"
+    "url": "git+https://github.com/mschmidty/mlc.git"
   },
   "author": "Mike Schmidt",
   "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.18.6",
-    "cheerio": "^0.20.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-cheerio": "^0.6.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^2.4.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-svgmin": "^1.2.3",
-    "gulp-svgstore": "^5.0.5",
-    "gulp-uglify": "^1.5.4",
-    "svgo": "^0.6.1"
-  }
+  "bugs": {
+    "url": "https://github.com/mschmidty/mlc/issues"
+  },
+  "homepage": "https://github.com/mschmidty/mlc#readme"
 }
