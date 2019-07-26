@@ -21,10 +21,10 @@ get_header();
         <?php the_title( '<h1 class="entry-title page-banner-title">', '</h1>' ); ?>
       </header><!-- .entry-header -->
       <div class="sponsor-wrap">
-      
+
         <?php
         $args = array(
-          'post_type' => 'sponsors', 
+          'post_type' => 'sponsors',
           'order' => 'ASC'
         );
         // The Query
@@ -38,7 +38,7 @@ get_header();
             ?>
             <li class="sponsor-level">
               <div class="sponsor-level-wrap">
-              
+
                 <div class="sponsor-column1">
                   <h2><?php the_title(); ?></h2>
                 </div>
@@ -54,19 +54,19 @@ get_header();
                           $sponsor_image_size = 'full';
                           $sponsor_url = get_sub_field('sponsor_url');
                           ?>
-                            
+
                               <li>
-                                <a href="<?php 
+                                <a href="<?php
                                   if($sponsor_url){
                                     echo $sponsor_url;
                                   }else{
                                     echo "#";
                                   }
-                                ?>">
+                                ?>" target="_blank">
                                   <?php echo wp_get_attachment_image($sponsor_image, $sponsor_image_size); ?>
                                 </a>
                               </li>
-                            
+
                           <?php
 
                       endwhile;
@@ -82,7 +82,7 @@ get_header();
                 </div>
               </div>
             </li>
-            
+
             <?php
           }
           echo '</ul>';

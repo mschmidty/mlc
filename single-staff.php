@@ -21,15 +21,13 @@
     <h2><?php the_title(); ?></h2>
     <p class="staff-board-title"><?php the_field('staff_board_title'); ?></p>
     <p class="staff-board-quote">
-    
+
     <?php
       $quote = get_field('staff_board_quote');
       if($quote){
         echo $quote;
       }
     ?>
-
-      <?php the_field('staff_board_quote'); ?>
 
     </p>
 

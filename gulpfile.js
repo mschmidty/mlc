@@ -6,6 +6,9 @@ const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var path = require('path');
 
 
 //Styles Task
@@ -43,6 +46,25 @@ function browser() {
     watch('./src/js/*', js).on('change', browserSync.reload);
 }
 
+function svgstore() {
+    return gulp
+        .src('src/svg/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('template-parts'));
+}
+
 exports.css = css;
 exports.js = js;
-exports.default = series(css, js, browser);
+exports.svg = svgstore;
+exports.default = series(css, js, browser, svgstore);
