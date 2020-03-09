@@ -12,12 +12,12 @@ if( !empty($image) ):
   <div class="background-image" style="background: url(' <?php echo $url; ?>') no-repeat center center; background-size:cover;">
   </div>
   <div class="card-text-box">
-    
-    <?php 
+
+    <?php
       $date_raw = get_field('event_date', false, false);
       $date = new DateTime($date_raw);
       if($date_raw){
-        ?> 
+        ?>
         <div class="card-date">
           <span class="card-date-day"> <?php echo $date->format('j'); ?></span>
           <span class="card-date-month"> <?php echo $date->format('F'); ?></span>
@@ -25,10 +25,10 @@ if( !empty($image) ):
         <?php
       }
     ?>
-    
-    
+
+
     <h2><?php the_title() ?></h2>
-    <?php  
+    <?php
     $teaser = get_field('page_teaser');
     if($teaser){ ?>
       <p><?php echo $teaser; ?></p>

@@ -5,6 +5,13 @@
     position: absolute
     top: $gutter-spacing*4
     left: $gutter-spacing*2
+  @media all and(max-width:750px)
+    display: flex
+    justify-content: center
+    .page-banner-title
+      left: auto
+      max-width: 90%
+
 
 .page-banner-detail
   width: 100%
@@ -15,6 +22,10 @@
   align-items: center
   .page-banner-title
     margin-left: $gutter-spacing*2
+    @media all and(max-width:750px)
+      margin-left: 0
+      margin: 0 auto
+      max-width: 100%
 
 .page-banner-image
   display: block
@@ -31,4 +42,4 @@
   display: inline-block
   font-size: 4rem
   padding: 1rem 2rem
-    
+

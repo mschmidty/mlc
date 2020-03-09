@@ -6,9 +6,10 @@ const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
-var path = require('path');
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
+const path = require('path');
+const cssnano = require('gulp-cssnano');
 
 
 //Styles Task
@@ -18,8 +19,8 @@ function css() {
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
             cascade: false
-        }))
-        .pipe(minifyCSS())
+        })).on('error', sass.logError)
+        .pipe(cssnano({discardComments:false}))
         .pipe(rename('style.css'))
         .pipe(dest('./'), { sourcemaps: true })
         .pipe(browserSync.stream());
@@ -46,7 +47,7 @@ function browser() {
     watch('./src/js/*', js).on('change', browserSync.reload);
 }
 
-function svgstore() {
+function svg_store() {
     return gulp
         .src('src/svg/*.svg')
         .pipe(svgmin(function (file) {
@@ -66,5 +67,5 @@ function svgstore() {
 
 exports.css = css;
 exports.js = js;
-exports.svg = svgstore;
-exports.default = series(css, js, browser, svgstore);
+exports.svg = svg_store;
+exports.default = series(css, js, browser, svg_store);

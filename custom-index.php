@@ -9,10 +9,19 @@
 ?>
 
 <div class="home-page-programs container flex-cards-container">
-
 <?php
 $post_type_slug = get_field('post_type_slug');
-$args = array('post_type'=> $post_type_slug);
+if($post_type_slug == "event"){
+  $args = array(
+    'post_type' => $post_type_slug,
+    'posts_per_page' => -1,
+    'meta_key' => 'event_date',
+    'orderby' => 'meta_value',
+    'order' => 'ASC'
+  );
+}else{
+  $args = array('post_type'=> $post_type_slug);
+}
 $my_query = new WP_Query( $args );
 while ( $my_query->have_posts() ) : $my_query->the_post();
 
