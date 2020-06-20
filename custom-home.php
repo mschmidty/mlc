@@ -14,7 +14,7 @@
     <use xlink:href="#wheat-grain"></use>
   </svg>
   <h1 >Mission</h1>
-  <p>Montezuma Land Conservancy partners with our community to connect with, conserve, and enhance southwest Colorado’s agricultural, scenic, and recreational lands and wildlife habitat for today and future generations.</p>
+  <p>Changing lives through land conservation by connecting people to place, forever.</p>
   <a href="/about/" class="link">Learn More About us </a>
 </div>
 <div class="home-video-section">

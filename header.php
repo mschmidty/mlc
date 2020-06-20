@@ -28,9 +28,7 @@
 
 	<header id="masthead" class="site-header">
 		<a class="header-logo" href="/">
-			<svg  viewBox="0 0 216.3 135.3" xmlns="http://www.w3.org/2000/svg" version="1.1">
-		  	<use xlink:href="#mlc-logo"></use>
-		  </svg>
+			<img src="<?php echo get_template_directory_uri() ."/images/logo_new_2020.png"; ?>" alt="Montezuma Land Conservancy Logo">
 		</a>
 
 		<nav id="site-navigation" class="main-navigation header-navigation hidden-mobile-nav">

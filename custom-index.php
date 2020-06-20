@@ -11,6 +11,7 @@
 <div class="home-page-programs container flex-cards-container">
 <?php
 $post_type_slug = get_field('post_type_slug');
+## Order just the events by the date set for the event.
 if($post_type_slug == "event"){
   $args = array(
     'post_type' => $post_type_slug,
