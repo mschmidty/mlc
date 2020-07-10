@@ -35,6 +35,24 @@ function js() {
         .pipe(dest('./js', { sourcemaps: true }));
 }
 
+function svg_store() {
+  return src('src/svg/*.svg')
+      .pipe(svgmin(function (file) {
+          var prefix = path.basename(file.relative, path.extname(file.relative));
+          return {
+              plugins: [{
+                  cleanupIDs: {
+                      prefix: prefix + '-',
+                      minify: true
+                  }
+              }]
+          }
+      }))
+      .pipe(svgstore({ inlineSvg: true }))
+      .pipe(rename('svg.php'))
+      .pipe(dest('template-parts'));
+}
+
 function browser() {
     browserSync.init({
         proxy: 'mlc:8888',
@@ -44,28 +62,11 @@ function browser() {
     });
 
     watch('./src/sass/**/*', css);
+    watch('./src/svg/*', svg_store)
     watch('./src/js/*', js).on('change', browserSync.reload);
-}
-
-function svg_store() {
-    return gulp
-        .src('src/svg/*.svg')
-        .pipe(svgmin(function (file) {
-            var prefix = path.basename(file.relative, path.extname(file.relative));
-            return {
-                plugins: [{
-                    cleanupIDs: {
-                        prefix: prefix + '-',
-                        minify: true
-                    }
-                }]
-            }
-        }))
-        .pipe(svgstore())
-        .pipe(gulp.dest('template-parts'));
 }
 
 exports.css = css;
 exports.js = js;
 exports.svg = svg_store;
-exports.default = series(css, js, browser, svg_store);
+exports.default = series(css, js, svg_store, browser);

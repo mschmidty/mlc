@@ -9,6 +9,15 @@
     <a href="/donate/" class="outline-button white-outline-button">Donate</a>
   </div>
 </div>
+<div class="link-to-important">
+  <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <use xlink:href="#check-mark"></use>
+  </svg>
+  <p> 
+    Help Montezuma Land Conservancy renew our accreditation. 
+  </p>
+  <a href="/mlc-renewal-of-accreditation/" class="link-light">Submit a Comment</a>
+</div>
 <div class="home-mission-section section-wrapper pattern-section">
   <svg  viewBox="0 0 79.539 79.539" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <use xlink:href="#wheat-grain"></use>
