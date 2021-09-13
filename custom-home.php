@@ -9,26 +9,6 @@
     <a href="/donate/" class="outline-button white-outline-button">Donate</a>
   </div>
 </div>
-<div class="surveys-temporary full-width-card">
-  <div class="flex-grid">
-    <div class="col-2">
-      <h2>Community and Conservation Values Survey (Adults 18 and over)</h2>
-      <p>We believe listening to all the ways land matters to you and the concerns you have is critical to help guide our work in the future.</p>
-      <h4>We want your input</h4>
-      <div class="center">
-        <a class="outline-button white-outline-button" href="http://survey.constantcontact.com/survey/a07ehtn5sivkn95xwwt/start" class="button">Take the Survey</a>
-      </div>
-    </div>
-    <div class="col-2">
-      <h2>Youth Community Survey (Ages 10 to 18)</h2>
-      <p>Help guide Montezuma Land Conservancy (MLC) in developing conservation programs and land protection projects that will positively impact you here in Southwest Coloradogul!</p>
-      <h4>We want your input</h4>
-      <div class="center">
-        <a class="outline-button white-outline-button" href="http://survey.constantcontact.com/survey/a07ei0fbf3skovlicks/start" class="button">Take the Survey</a>
-      </div>
-    </div>
-  </div>
-</div>
 <div class="link-to-important background-dark-red board-link-home section-wrapper">
   <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <use xlink:href="#promotion"></use>
