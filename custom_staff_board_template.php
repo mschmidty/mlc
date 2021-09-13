@@ -6,6 +6,10 @@
 <div class="page-banner-detail page-banner-container pattern-section">
   <h1 class="page-banner-title"> <?php the_title(); ?> </h1>
 </div>
+<div class="container entry-content">
+<?php echo get_post_field('post_content', $post->ID); ?>
+  
+</div>
 
 <div class="container staff-board">
 

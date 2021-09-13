@@ -1,0 +1,17 @@
+.flex-grid
+  display: flex
+  width: 100%
+  div.col-2
+    margin-right: $gutter-spacing
+    padding: $gutter-spacing
+    width: 100%
+    &:nth-of-type(2n)
+      margin-right: 0
+  @media all and(max-width: 750px)
+    display: block
+    div.col-2
+      margin-right: $gutter-spacing/2
+      padding: $gutter-spacing/2
+      margin-bottom: $gutter-spacing/2
+      &:nth-of-type(2n)
+        margin-right: $gutter-spacing/2

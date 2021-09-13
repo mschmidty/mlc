@@ -28,7 +28,17 @@
 
 	<header id="masthead" class="site-header">
 		<a class="header-logo" href="/">
-			<img src="<?php echo get_template_directory_uri() ."/images/logo_new_2020.png"; ?>" alt="Montezuma Land Conservancy Logo">
+      <?php 
+        if(is_front_page()){
+          ?>
+            <img src="<?php echo get_template_directory_uri() ."/images/new_logo_white_letters.png"; ?>" alt="Montezuma Land Conservancy Logo">
+          <?php
+        }else{
+          ?>
+            <img src="<?php echo get_template_directory_uri() ."/images/logo_new_2020.png"; ?>" alt="Montezuma Land Conservancy Logo">
+          <?php
+        }
+      ?>
 		</a>
 
 		<nav id="site-navigation" class="main-navigation header-navigation hidden-mobile-nav">

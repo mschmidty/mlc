@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'mlc_v1_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mlc_v1_scripts() {
-	wp_enqueue_style( 'mlc_v1-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'mlc_v1-style', get_stylesheet_uri(), array(), '20210604_2' );
 
 	wp_enqueue_script( 'mlc_v1-main-script', get_template_directory_uri() . '/js/main.min.js', array('jquery'), '1.0', true );
 

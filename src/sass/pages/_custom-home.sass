@@ -50,11 +50,21 @@
     text-shadow: 0 0 1px rgba(0,0,0,0.7)
     color: $white
 
-.link-to-important 
-  background: $dark-red
-  padding: 1rem 0.5rem
-  text-align: center
-  width: 100%
+.surveys-temporary
+  .col-2
+    position: relative
+    background: $blue
+    h4,h2, p 
+      color: $white
+    h4
+      margin-bottom: 1rem
+    a
+      text-align: center
+    a.outline-button
+      margin-top: 1.2rem
+      bottom: 0px
+
+.flex-link-to-important
   display: flex
   justify-content: center
   align-items: center
@@ -63,6 +73,21 @@
     fill: $white
     height: 2.3rem
     width: 2.3rem
+
+.link-to-important  
+  padding: 1rem 0.5rem
+  text-align: center
+  margin: $gutter-spacing $gutter-spacing 0 $gutter-spacing
+  @media all and(max-width: 750px)
+    margin: $gutter-spacing/2 $gutter-spacing/2 0 $gutter-spacing/2
+  &.board-link-home
+    padding: 4rem 0;
+    h2 
+      color: $white
+    svg
+      height: 100px
+      width: 100px
+      fill: $white
   .link-light 
     color: #2874A6
     font-size: 1.6rem

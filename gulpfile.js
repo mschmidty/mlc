@@ -10,6 +10,7 @@ const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const path = require('path');
 const cssnano = require('gulp-cssnano');
+const imagemin = require('gulp-imagemin');
 
 
 //Styles Task
@@ -53,6 +54,15 @@ function svg_store() {
       .pipe(dest('template-parts'));
 }
 
+function images(){
+  return src('src/images/**/**')
+    .pipe(imagemin([
+      imagemin.mozjpeg({quality:75, progressive:true}),
+      imagemin.optipng({optimizationLevel: 5})
+    ]))
+    .pipe(dest('./images'))
+}
+
 function browser() {
     browserSync.init({
         proxy: 'mlc:8888',
@@ -64,9 +74,11 @@ function browser() {
     watch('./src/sass/**/*', css);
     watch('./src/svg/*', svg_store)
     watch('./src/js/*', js).on('change', browserSync.reload);
+    watch('./src/images/*', images).on('change', browserSync.reload);
 }
 
 exports.css = css;
 exports.js = js;
 exports.svg = svg_store;
+exports.images = images;
 exports.default = series(css, js, svg_store, browser);
