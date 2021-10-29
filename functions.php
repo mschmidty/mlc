@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'mlc_v1_widgets_init' );
  * Enqueue scripts and styles.
  */
 function mlc_v1_scripts() {
-	wp_enqueue_style( 'mlc_v1-style', get_stylesheet_uri(), array(), '20210604_2' );
+	wp_enqueue_style( 'mlc_v1-style', get_stylesheet_uri(), array(), '20211027_2' );
 
 	wp_enqueue_script( 'mlc_v1-main-script', get_template_directory_uri() . '/js/main.min.js', array('jquery'), '1.0', true );
 
@@ -155,5 +155,16 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
+}
+
+/**
+ * Remove height and width from images.
+ */
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
 }
 

@@ -11,14 +11,6 @@
 </div>
 <div class="link-to-important background-dark-red board-link-home section-wrapper">
   <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <use xlink:href="#promotion"></use>
-  </svg>
-  <h2>Hiring a Conservation Director</h2>
-  <p>Join our Team. MLC is hiring a full-time Conservation Director. Click here to learn more!</p> <br>
-  <a href="<?php echo get_template_directory_uri() . '/pdfs/Conservation_Director_PositionDescription_2021.pdf'; ?>" class="outline-button white-outline-button">Click Here for More Information</a>
-</div>
-<div class="link-to-important background-dark-red board-link-home section-wrapper">
-  <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <use xlink:href="#tractor"></use>
   </svg>
   <h2>Seeking New Board Members</h2>
