@@ -9,6 +9,14 @@
     <a href="/donate/" class="outline-button white-outline-button">Donate</a>
   </div>
 </div>
+<div class="link-to-important background-blue board-link-home section-wrapper">
+  <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <use xlink:href="#promotion"></use>
+  </svg>
+  <h2>Montezuma Inspire Coalition Coordinator</h2>
+  <p>Join Our Team! MLC is hiring for a full-time Montezuma Inspire Coalition Coordinator.</p> <br>
+  <a href="<?php echo get_template_directory_uri() . '/pdfs/MIC_coordinator_job_announcement.pdf'; ?>" class="outline-button white-outline-button">Click Here for More Info and to Apply.</a>
+</div>
 <div class="link-to-important background-dark-red board-link-home section-wrapper">
   <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <use xlink:href="#tractor"></use>
@@ -17,6 +25,7 @@
   <p>Do you have a passion for community impact through conservation? MLC is seeking board members.</p> <br>
   <a href="/about/board/" class="outline-button white-outline-button">Click Here to Find Out More</a>
 </div>
+
 <!-- <div class="link-to-important background-dark-red flex-link-to-important">
   <svg  viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" version="1.1">
     <use xlink:href="#check-mark"></use>
